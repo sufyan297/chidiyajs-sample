@@ -1,12 +1,14 @@
-import Types from '@ascendtis/chidiya';
+import { Types } from '@ascendtis/chidiya';
 
 export default {
   name: "Address", //modelName
   tableName: "addresses",
   validation: true,
-  fields: {
+  columns: {
     id: {
-      type: Types.ID
+      type: Types.ID,
+      primary: true,
+      generated: true
     },
     user_id: {
       type: Types.ID
@@ -32,8 +34,8 @@ export default {
       type: 'one-to-one',
       target: 'User',
       joinColumn: {
-        name: 'id', //ForeginTable ColumnName
-        referencedColumnName: 'user_id' //SameTable ColumnName
+        name: 'user_id', //SampleTable ColumnName
+        referencedColumnName: 'id' //ForeignTable ColumnName
       },
       inverseSide: 'addresses' //You need to specify relations for `addresses` in UserModel.
     }

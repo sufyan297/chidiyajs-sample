@@ -1,4 +1,4 @@
-import Types from '@ascendtis/chidiya';
+import { Types } from '@ascendtis/chidiya';
 
 export default {
   name: "User",

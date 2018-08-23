@@ -1,5 +1,6 @@
+//this should be accessible with /User/sample
 export default {
-  name: 'Sample',
+  name: 'sample',
   method: 'GET',
   main: (input, {Database, orm, Session, req, res, next}) => {
 
