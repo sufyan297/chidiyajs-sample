@@ -13,61 +13,70 @@
 
 ## Scaffolding API
 - By default ChidiyaJS will create ready made API for CRUD operations.
-  * CREATE/INSERT => Route - /:modelName/create
+  * **CREATE/INSERT** => Route - /:modelName/create
   - So in our case it will generate `/User/create` and `/Address/create`.
   - Example:
-    Method: POST
-    Route: http://localhost:3000/User/create
-    Body: (application/json)
-    `{
-      "input": {
-        "name":"Mohammed Sufyan",
-        "age": 24,
-        "username": "Sufyan",
-        "password": "123456"
-      }
-    }`
+    - Method: POST
+    - Route: http://localhost:3000/User/create
+    - Body: (application/json)
+      
+ ```
+ {
+  "input": {
+   "name":"Mohammed Sufyan",
+   "age": 24,
+   "username": "Sufyan",
+   "password": "123456"
+  }
+ }
+```
 
 
-  * UPDATE => Route - /:modelName/update
+  * **UPDATE** => Route - /:modelName/update
   - Example:
-    Method: POST
-    Route: http://localhost:3000/User/update
-    Body: (application/json)
-    `{
-      "input": {
-        "name":"Mohammed Sufyan",
-        "age": 24,
-        "username": "Sufyan297",
-        "password": "123456"
-      },
-      "where":{
-        "id": "fe634ee8-02d4-466e-8b39-ca3e81a58a8a"
-      }
-    }`
+  	- Method: POST
+    - Route: http://localhost:3000/User/update
+    - Body: (application/json)
+```
+{
+  "input": {
+    "name":"Mohammed Sufyan",
+    "age": 24,
+    "username": "Sufyan297",
+    "password": "123456"
+  },
+  "where":{
+    "id": "fe634ee8-02d4-466e-8b39-ca3e81a58a8a"
+  }
+}
+```
 
-    * DELETE => Route - /:modelName/delete
-    - Example:
-      Method: POST
-      Route: http://localhost:3000/User/delete
-      Body: (application/json)
-      `{
-        "where":{
-          "id": "fe634ee8-02d4-466e-8b39-ca3e81a58a8a"
-        }
-      }`
+   * **DELETE** => Route - /:modelName/delete
+   - Example:
+    - Method: POST
+    - Route: http://localhost:3000/User/delete
+    - Body: (application/json)
+```
+{
+ "where":{
+  "id": "fe634ee8-02d4-466e-8b39-ca3e81a58a8a"
+ }
+}
+```
 
-      * QUERY/RETRIEVE => Route - /:modelName/query
+   * **QUERY/RETRIEVE** => Route - /:modelName/query
       - Example:
-        Method: POST
-        Route: http://localhost:3000/User/query
-        Body: (application/json)
-        `{
-          "find":{
-            "where": {
-              "name": "Mohammed Shaikh"
-            },
-            "select": ["name","username","age"],
-            "relations": ["addresses"]
-          }
-        }`
+       - Method: POST
+       - Route: http://localhost:3000/User/query
+       - Body: (application/json)
+```
+{
+ "find":{
+  "where": {
+   "name": "Mohammed Shaikh"
+   },
+   "select": ["name","username","age"],
+   "relations": ["addresses"]
+  }
+}
+```
