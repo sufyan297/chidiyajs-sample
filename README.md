@@ -13,7 +13,7 @@
 
 ## Scaffolding API
 - By default ChidiyaJS will create ready made API for CRUD operations.
-  * **CREATE/INSERT** => Route - /:modelName/create
+ * **CREATE/INSERT** => Route - /:modelName/create
   - So in our case it will generate `/User/create` and `/Address/create`.
   - Example:
     - Method: POST
