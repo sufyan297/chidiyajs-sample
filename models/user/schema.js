@@ -1,5 +1,21 @@
 import { Types } from '@ascendtis/chidiya';
 
+/*
+  DDL
+
+CREATE TABLE `Users` (
+  `id` char(36) NOT NULL,
+  `name` varchar(255) NOT NULL,
+  `age` int(3) NOT NULL,
+  `username` varchar(255) NOT NULL,
+  `password` varchar(255) NOT NULL,
+  `created_at` datetime NOT NULL,
+  `updated_at` datetime NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+*/
+
 export default {
   name: "User",
   tableName: "Users",
